@@ -1,0 +1,54 @@
+{
+  "name": "propuska",
+  "version": "1.0",
+  "description": "propuska",
+  "main": "index.php",
+  "scripts": {
+    "test": "editorconfig-checker",
+    "clear_r": "ssh manist1h_ruvick@manist1h.beget.tech \"rm propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/*.*\"",
+    "send_r": "scp -C *.php *.png *.css manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_ms": "scp -C *.css manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_head": "scp -C header.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_cat": "scp -C category.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_singl": "scp -C single.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_index": "scp -C index.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_func": "scp -C functions.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_futt": "scp -C footer.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "mk_part_carbon": "ssh manist1h_ruvick@manist1h.beget.tech \"mkdir -p propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/inc\"",
+    "send_carbon": "scp -C -r inc manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_carbon_fild": "scp -C -r inc/custom-fields-options manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/inc/",
+    "mk_part_dir": "ssh manist1h_ruvick@manist1h.beget.tech \"mkdir -p propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/template-parts\"",
+    "send_part": "scp -C -r template-parts manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "mk_part_img": "ssh manist1h_ruvick@manist1h.beget.tech \"mkdir -p propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/img\"",
+    "send_img": "scp -r img manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "mk_part_css": "ssh manist1h_ruvick@manist1h.beget.tech \"mkdir -p propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/css\"",
+    "send_css": "scp -C -r css manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "mk_part_js": "ssh manist1h_ruvick@manist1h.beget.tech \"mkdir -p propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/js\"",
+    "send_js": "scp -r js manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "mk_part_fonts": "ssh manist1h_ruvick@manist1h.beget.tech \"mkdir -p propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/fonts\"",
+    "send_fonts": "scp -C -r manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "group_media": "group-css-media-queries css/main.css css/g_main.css",
+    "send_all": "npm run send_r & npm run send_css & npm run send_part & npm run send_img & npm run send_image & npm run send_js & npm run send_fonts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruvick/propuska_wp.git"
+  },
+  "keywords": [
+    "wp",
+    "WordPress"
+  ],
+  "author": "ruvick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruvick/propuska_wp/issues"
+  },
+  "homepage": "https://github.com/ruvick/propuska_wp#readme",
+  "dependencies": {
+    "editorconfig-checker": "^3.1.0",
+    "group-css-media-queries": "^1.4.1",
+    "postcss-cli": "^7.1.2",
+    "postcss-csso": "^4.0.0",
+    "postcss-import": "^12.0.1"
+  }
+}
