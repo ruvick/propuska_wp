@@ -1,0 +1,46 @@
+﻿/*
+Theme Name: Пропуска Мкад
+Theme URI: 
+Author: ASMI Studio
+Author URI: 
+Description: Пропуска Мкад
+Version: 1.0
+Tags: Пропуска Мкад
+*/
+
+
+
+/* Арктик модал */
+
+.box-modal {
+	position: relative;
+	width: 500px;
+	padding: 16px;
+	background: #fff;
+	color: #3c3c3c;
+	font: 14px/18px Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+	box-shadow: 0 0 0 6px rgba(153, 153, 153, .3);
+	border-radius: 6px;
+}
+.box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 11px; line-height: 15px; color: #999; cursor: pointer; }
+.box-modal_close:hover { color: #666; }
+
+.info__inner-page {
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+.review-cont {
+	padding-top: 30px;
+}
+@media screen and (max-width:1024px), handheld{ }
+@media screen and (max-width:980px), handheld{ }
+@media screen and (max-width:800px), handheld{ }
+@media screen and (max-width:768px), handheld{ }
+@media screen and (max-width:667px), handheld{ }
+@media screen and (max-width:568px), handheld{ }
+@media screen and (max-width:480px), handheld{ }
+@media screen and (max-width:375px), handheld{ }
+@media screen and (max-width:320px), handheld{ }

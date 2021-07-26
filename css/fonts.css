@@ -1,0 +1,32 @@
+
+
+@font-face {
+	font-family: "NeoSansProRegular";
+	src: url("../fonts/NeoSansProRegular/NeoSansProRegular.eot");
+	src: url("../fonts/NeoSansProRegular/NeoSansProRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/NeoSansProRegular/NeoSansProRegular.woff") format("woff"),
+	url("../fonts/NeoSansProRegular/NeoSansProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/*
+@font-face {
+	font-family: "NeoSansProBold";
+	src: url("../fonts/NeoSansProBold/NeoSansProBold.eot");
+	src: url("../fonts/NeoSansProBold/NeoSansProBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/NeoSansProBold/NeoSansProBold.woff") format("woff"),
+	url("../fonts/NeoSansProBold/NeoSansProBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+} */
+
+@font-face {
+	font-family: "Adventure";
+	src: url("../fonts/Adventure/Adventure.eot");
+	src: url("../fonts/Adventure/Adventure.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/Adventure/Adventure.woff") format("woff"),
+	url("../fonts/Adventure/NeoSansProRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
