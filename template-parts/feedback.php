@@ -4,9 +4,9 @@
 			global $title;
 	        if($title == 0):
 		      ?>
-			<p class="feedback__heading section-heading">Оставьте заявку прямо сейчас и получите официальный пропуск на 10 дней бесплатно!</p>
+			<p class="feedback__heading section-heading">Оставьте заявку прямо сейчас и получите официальный пропуск за 1 день</p>
 		      <?php else:?>
-			<h2 class="feedback__heading section-heading">Оставьте заявку прямо сейчас и получите официальный пропуск на 10 дней бесплатно!</h2>
+			<h2 class="feedback__heading section-heading">Оставьте заявку прямо сейчас и получите официальный пропуск за 1 день</h2>
 		    <?php endif;?>
 			<div class="feedback__form">
 				<form action="" class="feedback__form-container" id = "feedbackform">

@@ -147,7 +147,7 @@ button {
 
 .action-btn,
 .action-btn-inverse {
-  display: inline-block;
+  display: inline-block; 
   background-color: #FFC80B;
   color: #000;
   border: 2px solid #898989;
@@ -463,6 +463,7 @@ h6,
 
 .intro__info-text-heading {
   font-size: 2.7rem;
+  margin-bottom: 20px;
 }
 
 .intro__info-text-heading-single {
@@ -471,6 +472,19 @@ h6,
 
 .intro__info-text-desc {
   font-size: 2.38889rem;
+}
+
+.intro__info-flag {
+  display: block;
+  width: 273px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.intro__info-flag img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .intro__info-form {
@@ -492,7 +506,8 @@ h6,
 
 .form__info {
   position: relative;
-  padding: 23px 10px 13px;
+  /* padding: 23px 10px 13px; */
+  padding: 23px 10px 23px 10px;
   text-align: center;
   background-color: #E7E8EA;
 }
@@ -506,7 +521,8 @@ h6,
   top: 53px;
   bottom: 20px;
   right: -50px;
-  width: 82px;
+  /* width: 82px; */
+  width: 45px;
   background-repeat: no-repeat;
   background-position: top bottom;
   -webkit-background-size: 100%;
@@ -579,7 +595,8 @@ h6,
 }
 
 .form__container {
-  padding: 10px 40px 0;
+  /* padding: 10px 40px 0; */
+  padding: 20px 40px 0;
   padding-right: 45px;
 }
 

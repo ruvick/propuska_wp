@@ -4,9 +4,9 @@
 			global $title;
 	        if($title == 0):
 		      ?>
-			<p class="docs__heading  section-heading">Необходимый пакет документов</p>
+			<p class="docs__heading  section-heading">Пакет документов для Белорусских автомобилей</p>
 		      <?php else:?>
-			<h2 class="docs__heading  section-heading">Необходимый пакет документов</h2>
+			<h2 class="docs__heading  section-heading">Пакет документов для Белорусских автомобилей</h2>
 		    <?php endif;?>
 			<div class="docs__list">
 				<ul class="docs__list-container">
