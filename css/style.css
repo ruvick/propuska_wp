@@ -476,7 +476,20 @@ h6,
 .intro__info-form {
   width: 440px;
   min-width: 440px;
-  max-width: 440px;
+  max-width: 440px; 
+}
+
+.intro__info-flag {
+  display: block;
+  width: 273px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.intro__info-flag img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .intro__utp {

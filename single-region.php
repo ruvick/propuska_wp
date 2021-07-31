@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Шаблон записи Регион
+Template Name: Шаблон записи Страна
 Template Post Type: post
 */
 
