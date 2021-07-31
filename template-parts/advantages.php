@@ -62,8 +62,7 @@
 							<div class="advantages__list-media">
 								<img src="<?php bloginfo("template_url");?>/img/icons/Preim_icon_6.svg" class="advantages__list-media-icon">
 							</div>
-							<div class="advantages__list-text">Работаем по договору</div>
-							<!-- <div class="advantages__list-text">Бесплатный<br/> пропуск на 14 дней</div> -->
+							<div class="advantages__list-text">Бесплатный<br/> пропуск на 14 дней</div>
 						</div>
 					</li>
 				</ul>

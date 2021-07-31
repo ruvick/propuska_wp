@@ -26,26 +26,23 @@
 					<div class="intro__info-text-desc">для грузовых автомобилей</div>
 				</p>
 		      <?php else:?>
-					<h1 class="intro__info-text-heading">Пропуск на МКАД
+					<h1 class="intro__info-text-heading">Пропуск в Москву
 					<div class="intro__info-text-desc">для грузовых автомобилей</div>
 				</h1>
 		    <?php endif;?>
-				<a href="#" class="intro__info-flag">
-					<img src="<?php echo get_template_directory_uri();?>/img/flags/russian-flag.jpg" alt="">
-				</a>
 				</div>
 			<?php //endif;?>
 				
 				<div class="intro__info-form">
 					<div class="form">
 						<div class="form__info">
-							<p class="form__info-caption section-heading"> </p>
+							<p class="form__info-caption section-heading">Бесплатно</p>
 							<div class="form__info-desc">
-							Оформим пропуск за 1 день!
-								<!-- <div class="form__info-desc--small">до конца акции</div> -->
+								временный пропуск на 10 дней
+								<div class="form__info-desc--small">до конца акции</div>
 							</div>
 						</div>
-						<!-- <div class="form__timer js-timer-cnt">
+						<div class="form__timer js-timer-cnt">
 							<div class="form__timer-item">
 								<div class="form__timer-number js-days">2</div>
 								<div class="form__timer-text">дня</div>
@@ -62,14 +59,14 @@
 								<div class="form__timer-number js-seconds">53</div>
 								<div class="form__timer-text">секунд</div>
 							</div>
-						</div> -->
+						</div>
 						<form action="" class="form__container" id = "mainform">
 							<div class="form__fields">
 								<input type="text" name="name" class="form__fields-item uniFormName" placeholder="Напишите ваше имя" required autocomplete="off">
 								<input type="tel" name="phone_number" class="form__fields-item mascedtel  uniFormTel" placeholder="Введите номер телефона" required autocomplete="off">
 							</div>
 							<div class="form__action">
-								<div class="form__action-btn action-btn uniSendBtn" data-formid = "mainform" data-mailmsg = "Форма - банер главной страницы">Получить пропуск</div>
+								<div class="form__action-btn action-btn uniSendBtn" data-formid = "mainform" data-mailmsg = "Форма - банер главной страницы">Получить бесплатно</div>
 							</div>
 						</form>
 					</div>

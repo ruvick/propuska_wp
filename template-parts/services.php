@@ -56,8 +56,8 @@
 							<p class="services__carts-heading">Пропуск на <br/>СК</p>
 							<i class="services__carts-img" style="background-image: url(<?php bloginfo("template_url");?>/img/carts/3.jpg);"></i>
 							<div class="services__carts-price">
-								<div class="services__carts-price-old">7 000 &#x20BD;</i></div>
-								<div class="services__carts-price-real"> 5 000 &#x20BD;</i></div>
+								<div class="services__carts-price-old">20 000 &#x20BD;</i></div>
+								<div class="services__carts-price-real"> 12 000 &#x20BD;</i></div>
 							</div>
 							<div class="services__carts-about">
 								<a href="#" class="services__carts-about-link">Подробнее</a>
