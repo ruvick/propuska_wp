@@ -39,7 +39,7 @@
 			<?php //endif;
 			?>
 
-			<div class="intro__info-form">
+			<div class="intro__info-form intro__info-form-region">
 				<div class="form">
 					<div class="form__info">
 						<p class="form__info-caption section-heading"> </p>
