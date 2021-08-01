@@ -69,7 +69,7 @@
 					<form action="" class="form__container" id="mainform">
 						<div class="form__fields">
 							<input type="text" name="name" class="form__fields-item uniFormName" placeholder="Напишите ваше имя" required autocomplete="off">
-							<input type="tel" name="phone_number" class="form__fields-item mascedtel  uniFormTel" placeholder="Введите номер телефона" required autocomplete="off">
+							<input type="tel" name="phone_number" class="form__fields-item uniFormTel" placeholder="Введите номер телефона" required autocomplete="off">
 						</div>
 						<div class="form__action">
 							<div class="form__action-btn action-btn uniSendBtn" data-formid="mainform" data-mailmsg="Форма - банер главной страницы">Получить пропуск</div>
