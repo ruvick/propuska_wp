@@ -1012,9 +1012,9 @@ h6,
 }
 
 .services__sub-list-item-flags {
-  max-width: 150px;
+  max-width: 200px;
   width: 100%;
-  height: 88px;
+  height: 100px;
 }
 
 .services__sub-list-link-flags {
@@ -3851,5 +3851,9 @@ div.brands-item:hover {
 
   .box-modal {
     width: 300px;
+  }
+  .intro__info-flag {
+    width: 100%;
+    height: auto;
   }
 }

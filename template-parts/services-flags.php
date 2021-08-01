@@ -100,7 +100,7 @@
 				<ul class="services__sub-list-container">
 					<?php
 					$posts = get_posts(array(
-						'numberposts' => 6,
+						'numberposts' => -1,
 						'category'    => 3,
 						'orderby'     => 'date',
 						'order'       => 'ASC',
