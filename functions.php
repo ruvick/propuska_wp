@@ -41,16 +41,17 @@ function my_assets_admin(){
 		) );
 }
 
+define("allversion", "1.0.8");
 
 // Подключение стилей и nonce для Ajax и скриптов во фронтенд 
-add_action( 'wp_enqueue_scripts', 'my_assets' );
+add_action( 'wp_enqueue_scripts', 'my_assets' ); 
 	function my_assets() {
-		wp_enqueue_style('circle', get_template_directory_uri() . '/css/circle.css', array(), null, 'all');
-		wp_enqueue_style("style-frontend",get_template_directory_uri()."/css/style.css");
-		wp_enqueue_style("style-modal",get_template_directory_uri()."/css/jquery.arcticmodal-0.3.css");
+		wp_enqueue_style('circle', get_template_directory_uri() . '/css/circle.css', array(), allversion, 'all');
+		wp_enqueue_style("style-frontend",get_template_directory_uri()."/css/style.css", array(), allversion, 'all');
+		wp_enqueue_style("style-modal",get_template_directory_uri()."/css/jquery.arcticmodal-0.3.css", array(), allversion, 'all');
 		
-		wp_enqueue_style("slick",get_template_directory_uri()."/css/slick.css");
-		wp_enqueue_style("fb",get_template_directory_uri()."/css/jquery.fancybox.min.css");
+		wp_enqueue_style("slick",get_template_directory_uri()."/css/slick.css", array(), allversion, 'all');
+		wp_enqueue_style("fb",get_template_directory_uri()."/css/jquery.fancybox.min.css", array(), allversion, 'all');
 		
 		wp_enqueue_script( 'jquery');
 
@@ -497,5 +498,3 @@ function set_lis_z() {
 		}
 		add_shortcode( 'trueurl', 'true_url_external' );
 	*/
-	
-?>
