@@ -465,6 +465,10 @@ h6,
   font-size: 2.7rem;
 }
 
+.intro__info-text-heading-region {
+  color: #fff;
+}
+
 .intro__info-text-heading-single {
 	    padding-bottom: 17px;
 }
@@ -2861,6 +2865,24 @@ div.brands-item:hover {
   background-size: cover;
   margin: 10px;
 }
+
+.entry-card-img {
+  /* max-width: 430px; */
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.site-main-region {
+  padding-bottom: 30px;
+}
+
+.entry-card-img img {
+  width: 100%;
+  height: 100%;
+}
+
 @media all and (max-width: 1460px) {
   .povyshenie-advantages {
     overflow-x: hidden;
@@ -3109,6 +3131,10 @@ div.brands-item:hover {
 
   .additional-service__item.post {
     width: 100%;
+  }
+
+  .additional-service__item-region.post {
+    width: 48%;
   }
 
   .partners-offer .container {
@@ -3663,6 +3689,10 @@ div.brands-item:hover {
   .box-modal {
     width: 600px;
   }
+  .entry-card-img {
+    width: 100%;
+    height: 200px;
+  }
 }
 
 @media all and (max-width: 650px) {
@@ -3747,6 +3777,12 @@ div.brands-item:hover {
   }
 }
 
+@media all and (max-width: 612px) {
+  .additional-service__item-region.post {
+    width: 80%;
+  }
+}
+
 @media all and (max-width: 578px) {
   .strahovanie-doc__block {
     width: 100%;
@@ -3804,6 +3840,9 @@ div.brands-item:hover {
     font-weight: bold;
     position: static;
   }
+  .additional-service__item-region.post {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -3844,7 +3883,7 @@ div.brands-item:hover {
     font-size: 2.8em;
   }
 }
-@media all and (max-width: 364px) {
+@media all and (max-width: 364px) { 
   .intro__info-text-heading {
     font-size: 2.4em;
   }
