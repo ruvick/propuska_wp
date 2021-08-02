@@ -1,162 +1,161 @@
 <?php
-ini_set("display_errors",1);
+ini_set("display_errors", 1);
 error_reporting(E_ALL);
 
-add_action( 'carbon_fields_register_fields', 'boots_register_custom_fields' );
-function boots_register_custom_fields() {
-// путь к пользовательскому файлу определения поля (полей), измените под себя
-require_once __DIR__ . '/inc/custom-fields-options/metabox.php';
-
-
+add_action('carbon_fields_register_fields', 'boots_register_custom_fields');
+function boots_register_custom_fields()
+{
+	// путь к пользовательскому файлу определения поля (полей), измените под себя
+	require_once __DIR__ . '/inc/custom-fields-options/metabox.php';
 }
-add_action( 'after_setup_theme', 'crb_load' );
-function crb_load() {
-	require_once( get_template_directory() . '/inc/carbon-fields/vendor/autoload.php' );
+add_action('after_setup_theme', 'crb_load');
+function crb_load()
+{
+	require_once(get_template_directory() . '/inc/carbon-fields/vendor/autoload.php');
 	\Carbon_Fields\Carbon_Fields::boot();
 }
 
 include_once('options_page.php');
 include_once('aus.php');
 
-add_theme_support( 'woocommerce' );
+add_theme_support('woocommerce');
 
 $title = true;
 
-register_nav_menus( array(
+register_nav_menus(array(
 	'header_menu' => 'Главное меню'
-) );
+));
 
-add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 185, 185 ); 
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(185, 185);
 
-add_post_type_support( 'page', 'excerpt' );
+add_post_type_support('page', 'excerpt');
 
 // Подключение стилей и nonce для Ajax в админку 
 add_action('admin_head', 'my_assets_admin');
-function my_assets_admin(){
-	wp_enqueue_style("style-adm",get_template_directory_uri()."/style-admin.css");
-	
-	wp_localize_script( 'jquery', 'allAjax', array(
-			'nonce'   => wp_create_nonce( 'NEHERTUTLAZIT' )
-		) );
+function my_assets_admin()
+{
+	wp_enqueue_style("style-adm", get_template_directory_uri() . "/style-admin.css");
+
+	wp_localize_script('jquery', 'allAjax', array(
+		'nonce'   => wp_create_nonce('NEHERTUTLAZIT')
+	));
 }
 
-define("allversion", "1.0.8");
+define("allversion", "1.0.9");
 
 // Подключение стилей и nonce для Ajax и скриптов во фронтенд 
-add_action( 'wp_enqueue_scripts', 'my_assets' ); 
-	function my_assets() {
-		wp_enqueue_style('circle', get_template_directory_uri() . '/css/circle.css', array(), allversion, 'all');
-		wp_enqueue_style("style-frontend",get_template_directory_uri()."/css/style.css", array(), allversion, 'all');
-		wp_enqueue_style("style-modal",get_template_directory_uri()."/css/jquery.arcticmodal-0.3.css", array(), allversion, 'all');
-		
-		wp_enqueue_style("slick",get_template_directory_uri()."/css/slick.css", array(), allversion, 'all');
-		wp_enqueue_style("fb",get_template_directory_uri()."/css/jquery.fancybox.min.css", array(), allversion, 'all');
-		
-		wp_enqueue_script( 'jquery');
+add_action('wp_enqueue_scripts', 'my_assets');
+function my_assets()
+{
+	wp_enqueue_style('circle', get_template_directory_uri() . '/css/circle.css', array(), allversion, 'all');
+	wp_enqueue_style("style-frontend", get_template_directory_uri() . "/css/style.css", array(), allversion, 'all');
+	wp_enqueue_style("style-modal", get_template_directory_uri() . "/css/jquery.arcticmodal-0.3.css", array(), allversion, 'all');
 
-		wp_enqueue_script( 'cookie', get_template_directory_uri().'/js/jquery.cookie.js', array('jquery'), null, true);
-		wp_enqueue_script( 'masced', get_template_directory_uri().'/js/jquery.inputmask.bundle.js', array('jquery'), null, true);
-		wp_enqueue_script( 'amodal', get_template_directory_uri().'/js/jquery.arcticmodal-0.3.min.js', array('jquery'), null, true);
-		
-		wp_enqueue_script( 'cand', get_template_directory_uri().'/js/jquery.countdown.min.js', array('jquery'), null, true);
-		wp_enqueue_script( 'slick', get_template_directory_uri().'/js/slick.min.js', array('jquery'), null, true);
-		//wp_enqueue_script( 'fbx', get_template_directory_uri().'/js/jquery.fancybox.min.js', array('jquery'), null, true);
-		wp_enqueue_script( 'scripts', get_template_directory_uri().'/js/scripts.js', array('jquery'), null, true);
-		wp_enqueue_script( 'main', get_template_directory_uri().'/js/main.js', array('jquery'), null, true);
-		
-		
-		wp_localize_script( 'jquery', 'allAjax', array(
-			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-			'nonce'   => wp_create_nonce( 'NEHERTUTLAZIT' )
-		) );
+	wp_enqueue_style("slick", get_template_directory_uri() . "/css/slick.css", array(), allversion, 'all');
+	wp_enqueue_style("fb", get_template_directory_uri() . "/css/jquery.fancybox.min.css", array(), allversion, 'all');
+
+	wp_enqueue_script('jquery');
+
+	wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'), null, true);
+	wp_enqueue_script('masced', get_template_directory_uri() . '/js/jquery.inputmask.bundle.js', array('jquery'), null, true);
+	wp_enqueue_script('amodal', get_template_directory_uri() . '/js/jquery.arcticmodal-0.3.min.js', array('jquery'), null, true);
+
+	wp_enqueue_script('cand', get_template_directory_uri() . '/js/jquery.countdown.min.js', array('jquery'), null, true);
+	wp_enqueue_script('slick', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), null, true);
+	//wp_enqueue_script( 'fbx', get_template_directory_uri().'/js/jquery.fancybox.min.js', array('jquery'), null, true);
+	wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true);
+	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true);
+
+
+	wp_localize_script('jquery', 'allAjax', array(
+		'ajaxurl' => admin_url('admin-ajax.php'),
+		'nonce'   => wp_create_nonce('NEHERTUTLAZIT')
+	));
+}
+
+
+add_action('wp_ajax_check_aus', 'check_aus');
+add_action('wp_ajax_nopriv_check_aus', 'check_aus');
+
+function check_aus()
+{
+	if (empty($_REQUEST['nonce'])) {
+		wp_die('0');
 	}
 
-	
-	add_action( 'wp_ajax_check_aus', 'check_aus' );
-	add_action( 'wp_ajax_nopriv_check_aus', 'check_aus' );
+	if (check_ajax_referer('NEHERTUTLAZIT', 'nonce', false)) {
 
-	function check_aus() {
-		if ( empty( $_REQUEST['nonce'] ) ) {
-			wp_die( '0' );
-		}
-		
-		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
-			
-			if(!empty($_REQUEST['ausnum'])){
-				
-				wp_die(json_encode(getNewData($_REQUEST['ausnum'])));
-			}
-			else{
-				wp_die("Нужен номер авто!");
-			}
+		if (!empty($_REQUEST['ausnum'])) {
 
-			
+			wp_die(json_encode(getNewData($_REQUEST['ausnum'])));
 		} else {
-			wp_die( 'НО-НО-НО!', '', 403 );
+			wp_die("Нужен номер авто!");
 		}
+	} else {
+		wp_die('НО-НО-НО!', '', 403);
 	}
-	
-	
-		add_action( 'wp_ajax_check_shtraf', 'check_shtraf' );
-	add_action( 'wp_ajax_nopriv_check_shtraf', 'check_shtraf' );
-
-	function check_shtraf() {
-		if ( empty( $_REQUEST['nonce'] ) ) {
-			wp_die( '0' );
-		}
-		
-		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
-			
-			if((!empty($_REQUEST['tsnum']))&&(!empty($_REQUEST['ptsnum']))){
-				
-				$rus=array("А", "В", "Е", "К", "М", "Н", "О", "Р", "С", "Т", "У","Х");
-	$lat=array("A", "B", "E", "K", "M", "H", "O", "P", "C", "T", "Y","X");
-				
-				$reg=mb_strtoupper($_POST['regnum']);
-				$regnum=explode(' ',str_replace($rus,$lat,urldecode($_REQUEST['tsnum'])))[0];
-				$regreg=explode(' ',str_replace($rus,$lat,urldecode($_REQUEST['ptsnum'])))[1];
-				$ch = curl_init();
-				curl_setopt($ch, CURLOPT_URL, "http://check.gibdd.ru/proxy/check/fines");
-				// откуда пришли на эту страницу
-				curl_setopt($ch, CURLOPT_REFERER, "https://гибдд.рф/check/fines");
-				// cURL будет выводить подробные сообщения о всех производимых действиях
-				curl_setopt($ch, CURLOPT_VERBOSE, 1);
-				curl_setopt($ch, CURLOPT_POST, 1);
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-				curl_setopt($ch, CURLOPT_ENCODING ,"UTF-8");
-				curl_setopt($ch, CURLOPT_COOKIESESSION, true);
-				curl_setopt($ch, CURLOPT_COOKIEFILE, dirname( $_SERVER['SCRIPT_FILENAME'] ).'/cookies/'.str_replace(".","_",$_SERVER['REMOTE_ADDR']));
+}
 
 
-				//curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query(array('regnum' =>  $regnum,'regreg' => $regreg ,'stsnum' =>  str_replace($rus,$lat,mb_strtoupper($_POST['stsnum'])),'captchaWord' => $_POST['cpt'] )));
-				curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query(array('regnum' =>  $regnum,'regreg' => $regreg )));
-				curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-				$result=curl_exec($ch);
-				
-				wp_die($result);
-			}
-			else{
-				wp_die("Номера документов не указаны");
-			}
+add_action('wp_ajax_check_shtraf', 'check_shtraf');
+add_action('wp_ajax_nopriv_check_shtraf', 'check_shtraf');
 
-			
+function check_shtraf()
+{
+	if (empty($_REQUEST['nonce'])) {
+		wp_die('0');
+	}
+
+	if (check_ajax_referer('NEHERTUTLAZIT', 'nonce', false)) {
+
+		if ((!empty($_REQUEST['tsnum'])) && (!empty($_REQUEST['ptsnum']))) {
+
+			$rus = array("А", "В", "Е", "К", "М", "Н", "О", "Р", "С", "Т", "У", "Х");
+			$lat = array("A", "B", "E", "K", "M", "H", "O", "P", "C", "T", "Y", "X");
+
+			$reg = mb_strtoupper($_POST['regnum']);
+			$regnum = explode(' ', str_replace($rus, $lat, urldecode($_REQUEST['tsnum'])))[0];
+			$regreg = explode(' ', str_replace($rus, $lat, urldecode($_REQUEST['ptsnum'])))[1];
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL, "http://check.gibdd.ru/proxy/check/fines");
+			// откуда пришли на эту страницу
+			curl_setopt($ch, CURLOPT_REFERER, "https://гибдд.рф/check/fines");
+			// cURL будет выводить подробные сообщения о всех производимых действиях
+			curl_setopt($ch, CURLOPT_VERBOSE, 1);
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			curl_setopt($ch, CURLOPT_ENCODING, "UTF-8");
+			curl_setopt($ch, CURLOPT_COOKIESESSION, true);
+			curl_setopt($ch, CURLOPT_COOKIEFILE, dirname($_SERVER['SCRIPT_FILENAME']) . '/cookies/' . str_replace(".", "_", $_SERVER['REMOTE_ADDR']));
+
+
+			//curl_setopt($ch, CURLOPT_POSTFIELDS,http_build_query(array('regnum' =>  $regnum,'regreg' => $regreg ,'stsnum' =>  str_replace($rus,$lat,mb_strtoupper($_POST['stsnum'])),'captchaWord' => $_POST['cpt'] )));
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('regnum' =>  $regnum, 'regreg' => $regreg)));
+			curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (Windows; U; Windows NT 5.0; En; rv:1.8.0.2) Gecko/20070306 Firefox/1.0.0.4");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			$result = curl_exec($ch);
+
+			wp_die($result);
 		} else {
-			wp_die( 'НО-НО-НО!', '', 403 );
+			wp_die("Номера документов не указаны");
 		}
+	} else {
+		wp_die('НО-НО-НО!', '', 403);
 	}
+}
 
-	if( ! is_admin() ){
-	add_action( 'pre_handle_404', 'remove_author_pages_page' );
-	add_filter( 'author_link', 'remove_author_pages_link' );
+if (!is_admin()) {
+	add_action('pre_handle_404', 'remove_author_pages_page');
+	add_filter('author_link', 'remove_author_pages_link');
 
 	// Ставим 404 статус
-	function remove_author_pages_page( $false ) {
-		if ( is_author() ) {
+	function remove_author_pages_page($false)
+	{
+		if (is_author()) {
 			global $wp_query;
 			$wp_query->set_404();
-			status_header( 404 );
+			status_header(404);
 			nocache_headers();
 
 			return true; // для обрыва хука
@@ -166,145 +165,149 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 	}
 
 	// удаляем ссылку
-	function remove_author_pages_link( $content ) {
+	function remove_author_pages_link($content)
+	{
 		return home_url();
 	}
 }
-	
-	add_filter('excerpt_more', 'propusc_excerpt_more');
-	function propusc_excerpt_more($args) {
-		return '...';
-	}
-	
-	add_action( 'wp_ajax_universal_send', 'universal_send' );
-	add_action( 'wp_ajax_nopriv_universal_send', 'universal_send' );
 
-	function universal_send() {
-		if ( empty( $_REQUEST['nonce'] ) ) {
-			wp_die( '0' );
-		}
-		
-		if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
-			
-			$headers = array(
-				'From: Сайт Пропуск МКАД <noreply@propuska-mkad-ttk-sk.ru>',
-				'content-type: text/html',
-			);
-			$telegram_message = 'Text message';
-			message_to_telegram($telegram_message);
-			message_to_telegram_1($message_telegram);
-			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-			if (wp_mail(carbon_get_theme_option( 'main_sendmail' ), 'Заказ с сайта', '<strong>С какой формы:</strong> '.$_REQUEST["msg"].'<br/> <strong>Имя/гос.номер:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"]." <br/> <strong>Госномер:</strong> ".$_REQUEST["gn"], $headers))
-				wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
-			else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
-			
-		} else {
-			wp_die( 'НО-НО-НО!', '', 403 );
-		}
+add_filter('excerpt_more', 'propusc_excerpt_more');
+function propusc_excerpt_more($args)
+{
+	return '...';
+}
+
+add_action('wp_ajax_universal_send', 'universal_send');
+add_action('wp_ajax_nopriv_universal_send', 'universal_send');
+
+function universal_send()
+{
+	if (empty($_REQUEST['nonce'])) {
+		wp_die('0');
 	}
+
+	if (check_ajax_referer('NEHERTUTLAZIT', 'nonce', false)) {
+
+		$headers = array(
+			'From: Сайт Пропуск МКАД <noreply@propuska-mkad-ttk-sk.ru>',
+			'content-type: text/html',
+		);
+		$telegram_message = 'Text message';
+		message_to_telegram($telegram_message);
+		message_to_telegram_1($message_telegram);
+		add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+		if (wp_mail(carbon_get_theme_option('main_sendmail'), 'Заказ с сайта', '<strong>С какой формы:</strong> ' . $_REQUEST["msg"] . '<br/> <strong>Имя/гос.номер:</strong> ' . $_REQUEST["name"] . ' <br/> <strong>Телефон:</strong> ' . $_REQUEST["tel"] . " <br/> <strong>Госномер:</strong> " . $_REQUEST["gn"], $headers))
+			wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
+		else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
+	} else {
+		wp_die('НО-НО-НО!', '', 403);
+	}
+}
 
 define('TELEGRAM_TOKEN', '988598320:AAG_xYsrpWbqXI7vH6w4o0XN7HfkFK4UKxY');
 define('TELEGRAM_CHATID', '86447923');
 function message_to_telegram($text)
 {
-		
+
 	$ch = curl_init();
-    curl_setopt_array(
-        $ch,
-        array(
-            CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
-            CURLOPT_POST => TRUE,
-            CURLOPT_RETURNTRANSFER => TRUE,
-            CURLOPT_TIMEOUT => 10,
-            CURLOPT_POSTFIELDS => array(
-                'chat_id' => TELEGRAM_CHATID,
-                'text' => $text,
-            ),
-        )
-    );
-    $output = curl_exec($ch);
+	curl_setopt_array(
+		$ch,
+		array(
+			CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
+			CURLOPT_POST => TRUE,
+			CURLOPT_RETURNTRANSFER => TRUE,
+			CURLOPT_TIMEOUT => 10,
+			CURLOPT_POSTFIELDS => array(
+				'chat_id' => TELEGRAM_CHATID,
+				'text' => $text,
+			),
+		)
+	);
+	$output = curl_exec($ch);
 	$current = file_get_contents("tglog.txt");
 	$current .= print_r($output, true);
 	file_put_contents("tglog.txt", $current);
-	
 }
 function message_to_telegram_1($text)
 {
-    $ch = curl_init();
-    curl_setopt_array(
-        $ch,
-        array(
-            CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
-            CURLOPT_POST => TRUE,
-            CURLOPT_RETURNTRANSFER => TRUE,
-            CURLOPT_TIMEOUT => 10,
-            CURLOPT_POSTFIELDS => array(
-                'chat_id' => '381762556',
-                'text' => $text,
-            ),
-        )
-    );
-    $output = curl_exec($ch);
-	
+	$ch = curl_init();
+	curl_setopt_array(
+		$ch,
+		array(
+			CURLOPT_URL => 'https://api.telegram.org/bot' . TELEGRAM_TOKEN . '/sendMessage',
+			CURLOPT_POST => TRUE,
+			CURLOPT_RETURNTRANSFER => TRUE,
+			CURLOPT_TIMEOUT => 10,
+			CURLOPT_POSTFIELDS => array(
+				'chat_id' => '381762556',
+				'text' => $text,
+			),
+		)
+	);
+	$output = curl_exec($ch);
+
 	$file = 'people.txt';
-	
+
 	// $current = file_get_contents("tglog.txt");
 	// $current .= print_r($output, true);
 	// file_put_contents("tglog.txt", $current);
-	
+
 }
 
-	function service_text_f($atts) {
-		$params = shortcode_atts(array(
-			'text' => '',
-		), $atts);
-		return $params['text'];
-	}
+function service_text_f($atts)
+{
+	$params = shortcode_atts(array(
+		'text' => '',
+	), $atts);
+	return $params['text'];
+}
 
-	add_shortcode('service_text', 'service_text_f');
+add_shortcode('service_text', 'service_text_f');
 
-	add_filter('cron_schedules', 'set_interval_for_write_date');
-	function set_interval_for_write_date($args) {
-		$args['new_int'] = array(
-			'interval' => 86400,
-			'display' => 'Каждые 2 дня'
-		);
-		$args['min_int'] = array(
-			'interval' => 30,
-			'display' => 'Каждые пол-минуты',
-		);
-		return $args;
-	}
+add_filter('cron_schedules', 'set_interval_for_write_date');
+function set_interval_for_write_date($args)
+{
+	$args['new_int'] = array(
+		'interval' => 86400,
+		'display' => 'Каждые 2 дня'
+	);
+	$args['min_int'] = array(
+		'interval' => 30,
+		'display' => 'Каждые пол-минуты',
+	);
+	return $args;
+}
 
 
 
-	function write_date() {
-		$file = get_template_directory() . '/date.txt';
-		$current_time = time() + 86400 * 2;
-		$time = date('n/d/Y H:i:s', $current_time);
-		file_put_contents($file, $time);
-		return true;
-	}
+function write_date()
+{
+	$file = get_template_directory() . '/date.txt';
+	$current_time = time() + 86400 * 2;
+	$time = date('n/d/Y H:i:s', $current_time);
+	file_put_contents($file, $time);
+	return true;
+}
 
-	add_action('set_date_for_script', 'write_date');
-	if(!wp_next_scheduled('set_date_for_script'))
-		wp_schedule_event(time(), 'new_int', 'set_date_for_script');
-	
+add_action('set_date_for_script', 'write_date');
+if (!wp_next_scheduled('set_date_for_script'))
+	wp_schedule_event(time(), 'new_int', 'set_date_for_script');
 
-	
+
+
 
 
 add_action('template_redirect', 'test_redirect');
-function test_redirect() {
-  global $page, $wp_query;
-  
-    if(is_singular()) {
-      if($page > 0) {
-        $wp_query->set_404();
-        wp_redirect( '/', 404 );
+function test_redirect()
+{
+	global $page, $wp_query;
 
-      }
-    }
+	if (is_singular()) {
+		if ($page > 0) {
+			$wp_query->set_404();
+			wp_redirect('/', 404);
+		}
+	}
 }
 
 	
