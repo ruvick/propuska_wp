@@ -111,21 +111,24 @@ jQuery(document).ready(function($) {
 			} else {
 				console.log(car_number);
 				jQuery('#ausModal').arcticmodal();
-				var  jqXHR = jQuery.post(
-					allAjax.ajaxurl,
-					{
-						action: 'check_aus',		
-						nonce: allAjax.nonce,
-						ausnum: car_number,
-					}
-					
-				);
+
+				
+
+				var  jqXHR = jQuery.get("https://propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info?number="+car_number);
+
+				// var  jqXHR = jQuery.post(
+				// 	allAjax.ajaxurl,
+				// 	{
+				// 		action: 'check_aus',		
+				// 		nonce: allAjax.nonce,
+				// 		ausnum: car_number,
+				// 	}
+				// );
 				
 				
 				jqXHR.done(function (responce) {
 					console.log(responce);
-					var rez = JSON.parse(responce);
-					console.log(rez);
+
 					var RezStr = "<table class='skip-information'>";
 					RezStr += "<thead>";
 						RezStr += "<tr>";
@@ -137,53 +140,54 @@ jQuery(document).ready(function($) {
 							RezStr += "<th>Осталось дней</th>";
 						RezStr += "</tr>";
 					RezStr += "</thead>";
-					rez.forEach(function(element){ 
+
+					responce.forEach(function(element){ 
 						
-							var date_start = element.dateStart.replace(/\./g, '-');
-							var date_start_arr = date_start.split('-');
-							var date_start_arr_day = date_start_arr[0];
-							date_start_arr[0] = date_start_arr[1];
-							date_start_arr[1] = date_start_arr_day;
-							date_start = date_start_arr.join('-');
-							var date_end = element.dateEnd.replace(/\./g, '-');
-							var date_end_arr = date_end.split('-');
-							var date_end_arr_day = date_end_arr[0];
-							date_end_arr[0] = date_end_arr[1];
-							date_end_arr[1] = date_end_arr_day;
-							date_end = date_end_arr.join('-');
+							// var date_start = element.dateStart.replace(/\./g, '-');
+							// var date_start_arr = date_start.split('-');
+							// var date_start_arr_day = date_start_arr[0];
+							// date_start_arr[0] = date_start_arr[1];
+							// date_start_arr[1] = date_start_arr_day;
+							// date_start = date_start_arr.join('-');
+							// var date_end = element.dateEnd.replace(/\./g, '-');
+							// var date_end_arr = date_end.split('-');
+							// var date_end_arr_day = date_end_arr[0];
+							// date_end_arr[0] = date_end_arr[1];
+							// date_end_arr[1] = date_end_arr_day;
+							// date_end = date_end_arr.join('-');
 							
-							var number_of_days = (Date.parse(date_end) - Date.parse(date_start)) / (1000 * 60 * 60 * 24);
-							console.log(number_of_days);
-							if(Date.now() > Date.parse(date_end)) {
-								number_of_days = 'закончен';
-							} else if(Date.now() < Date.parse(date_end) && element.status != 'CANCELED') {
-								var number_of_days = Math.ceil((Date.parse(date_end) - Date.now()) / (1000 * 60 * 60 * 24));
-							} else if(element.status == 'CANCELED') {
-								var now_date = new Date();
-								var now_day = now_date.getDate();
-								var now_month = now_date.getMonth() + 1;
-								if(now_month < 10) {
-									now_month = '0' + now_month;
-								}
-								var now_year = now_date.getFullYear();
-								//var number_of_days = 'аннулирован ' + now_day + '.' + now_month + '.' + now_year;
-								var number_of_days = 'аннулирован ' + element.cancelationdate;
-							}
-						if ( element.status == "ACTIVE") {
+							// var number_of_days = (Date.parse(date_end) - Date.parse(date_start)) / (1000 * 60 * 60 * 24);
+							// console.log(number_of_days);
+							// if(Date.now() > Date.parse(date_end)) {
+							// 	number_of_days = 'закончен';
+							// } else if(Date.now() < Date.parse(date_end) && element.status != 'CANCELED') {
+							// 	var number_of_days = Math.ceil((Date.parse(date_end) - Date.now()) / (1000 * 60 * 60 * 24));
+							// } else if(element.status == 'CANCELED') {
+							// 	var now_date = new Date();
+							// 	var now_day = now_date.getDate();
+							// 	var now_month = now_date.getMonth() + 1;
+							// 	if(now_month < 10) {
+							// 		now_month = '0' + now_month;
+							// 	}
+							// 	var now_year = now_date.getFullYear();
+							// 	//var number_of_days = 'аннулирован ' + now_day + '.' + now_month + '.' + now_year;
+							// 	var number_of_days = 'аннулирован ' + element.cancelationdate;
+							// }
+
+						if ( element.sys_status == "Действует") {
 							RezStr += "<tr class='bg-green'>";
-						} else if (element.status == "CANCELED") {
+						} else if (element.sys_status == "Закончился") {
 							RezStr += "<tr class='bg-red'>";
 						} else {
 							RezStr += "<tr>";
 						}
-								RezStr += "<td class='car_number'>" + car_number + "</td>";
-								RezStr += "<td class='element_zone'>"+element.zone+" ("+element.allinfo.passtime+")"+"</td>";
-								RezStr += "<td class='element_passInfo'>"+element.passInfo+"</td>";
-								RezStr += "<td class='element_dateStart'>"+element.dateStart+"</td>";
-								RezStr += "<td class='element_dateEnd'>"+element.dateEnd+"</td>";
-								RezStr += "<td class='element_number_of_days'>" + number_of_days  + "</td>";
+								RezStr += "<td class='car_number'>" + element.truck_num + "</td>";
+								RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+element.type_pass+")"+"</td>";
+								RezStr += "<td class='element_passInfo'>"+element.series+" "+element.truck_num+"</td>";
+								RezStr += "<td class='element_dateStart'>"+element.valid_from+"</td>";
+								RezStr += "<td class='element_dateEnd'>"+element.valid_to+"</td>";
+								RezStr += "<td class='element_number_of_days'>" + element.deycount  + "</td>";
 							RezStr += "</tr>";
-						
 					});
 					
 					RezStr += "</table>";
