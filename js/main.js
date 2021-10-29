@@ -176,16 +176,16 @@ jQuery(document).ready(function($) {
 
 						if ( element.sys_status == "Действует") {
 							RezStr += "<tr class='bg-green'>";
-						} else if (element.sys_status == "Закончился") {
+						} else if (element.sys_status == "Анулирован") {
 							RezStr += "<tr class='bg-red'>";
 						} else {
 							RezStr += "<tr>";
 						}
 								RezStr += "<td class='car_number'>" + element.truck_num + "</td>";
-								RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+element.type_pass+")"+"</td>";
-								RezStr += "<td class='element_passInfo'>"+element.series+" "+element.truck_num+"</td>";
-								RezStr += "<td class='element_dateStart'>"+element.valid_from+"</td>";
-								RezStr += "<td class='element_dateEnd'>"+element.valid_to+"</td>";
+								RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+((element.type_pass==null)?'Дневной':element.type_pass)+")"+"</td>";
+								RezStr += "<td class='element_passInfo'>"+element.series+" "+element.pass_number+"</td>";
+								RezStr += "<td class='element_dateStart'>"+element.valid_from.substr(0, 9)+"</td>";
+								RezStr += "<td class='element_dateEnd'>"+element.valid_to.substr(0, 9)+"</td>";
 								RezStr += "<td class='element_number_of_days'>" + element.deycount  + "</td>";
 							RezStr += "</tr>";
 					});
