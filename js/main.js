@@ -174,19 +174,21 @@ jQuery(document).ready(function($) {
 							// 	var number_of_days = 'аннулирован ' + element.cancelationdate;
 							// }
 
+							let dc = element.deycount;
 						if ( element.sys_status == "Действует") {
 							RezStr += "<tr class='bg-green'>";
 						} else if (element.sys_status == "Анулирован") {
 							RezStr += "<tr class='bg-red'>";
+							dc = "Аннулирован " + new Date(element.record_updated_on).toLocaleDateString()
 						} else {
 							RezStr += "<tr>";
 						}
 								RezStr += "<td class='car_number'>" + element.truck_num + "</td>";
 								RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+((element.type_pass==null)?'Дневной':element.type_pass)+")"+"</td>";
 								RezStr += "<td class='element_passInfo'>"+element.series+" "+element.pass_number+"</td>";
-								RezStr += "<td class='element_dateStart'>"+element.valid_from.substr(0, 9)+"</td>";
-								RezStr += "<td class='element_dateEnd'>"+element.valid_to.substr(0, 9)+"</td>";
-								RezStr += "<td class='element_number_of_days'>" + element.deycount  + "</td>";
+								RezStr += "<td class='element_dateStart'>"+element.valid_from.substr(0, 10)+"</td>";
+								RezStr += "<td class='element_dateEnd'>"+element.valid_to.substr(0, 10)+"</td>";
+								RezStr += "<td class='element_number_of_days'>" + dc  + "</td>";
 							RezStr += "</tr>";
 					});
 					
