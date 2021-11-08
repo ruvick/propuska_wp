@@ -177,7 +177,7 @@ jQuery(document).ready(function($) {
 							let dc = element.deycount;
 						if ( element.sys_status == "Действует") {
 							RezStr += "<tr class='bg-green'>";
-						} else if (element.sys_status == "Анулирован") {
+						} else if (element.status == "Аннулирован") {
 							RezStr += "<tr class='bg-red'>";
 							dc = "Аннулирован " + new Date(element.record_updated_on).toLocaleDateString()
 						} else {
