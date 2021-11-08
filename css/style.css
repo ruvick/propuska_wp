@@ -2883,6 +2883,28 @@ div.brands-item:hover {
   height: 100%;
 }
 
+#ausModal {
+  max-width: 975px;
+  width: 100%;}
+
+#ausModal .box-modal_close {
+  position: absolute;
+  top: 20px;
+  right: 13px;
+  font-size: 23px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (max-width: 1460px) {
   .povyshenie-advantages {
     overflow-x: hidden;

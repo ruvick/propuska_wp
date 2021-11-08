@@ -19,7 +19,7 @@ get_template_part('/template-parts/intro-page-middle-region');
       <?php if (!is_category(2)) : ?>
       <?php endif; ?>
       <?php if (is_category()) : ?>
-        <div class="additional-service is-category">
+        <div class="additional-service is-category"> 
         <?php endif; ?>
       <?php
       /* Start the Loop */

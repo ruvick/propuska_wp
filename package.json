@@ -11,6 +11,7 @@
     "send_head": "scp -C header.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
     "send_cat": "scp -C category.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
     "send_singl": "scp -C single.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
+    "send_wind": "scp -C arcticWin.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
     "send_index": "scp -C index.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
     "send_func": "scp -C functions.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
     "send_futt": "scp -C footer.php manist1h_ruvick@manist1h.beget.tech:propuska-mkad-ttk-sk.ru//public_html/wp-content/themes/propuska/",
