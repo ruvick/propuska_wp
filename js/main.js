@@ -179,7 +179,7 @@ jQuery(document).ready(function($) {
 							RezStr += "<tr class='bg-green'>";
 						} else if (element.status == "Аннулирован") {
 							RezStr += "<tr class='bg-red'>";
-							dc = "Аннулирован " + new Date(element.record_updated_on).toLocaleDateString()
+							dc = "Аннулирован " + new Date(element.cancel_date).toLocaleDateString()
 						} else {
 							RezStr += "<tr>";
 						}
