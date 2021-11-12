@@ -175,11 +175,18 @@ jQuery(document).ready(function($) {
 							// }
 
 							let dc = element.deycount;
-						if ( element.sys_status == "Действует") {
+						if (( element.sys_status == "Действует") 
+							|| ( element.sys_status ==  "Заканчивается завтра") 
+							|| ( element.sys_status ==  "Заканчивается сегодня")
+							|| ( element.sys_status ==  "Начинается сегодня")
+							|| ( element.sys_status ==  "Начинается завтра")
+							) {
 							RezStr += "<tr class='bg-green'>";
 						} else if (element.status == "Аннулирован") {
 							RezStr += "<tr class='bg-red'>";
-							dc = "Аннулирован " + new Date(element.cancel_date).toLocaleDateString()
+							str = element.cancel_date.split(' ', 2);
+							
+							dc = "Аннулирован " + str[0];
 						} else {
 							RezStr += "<tr>";
 						}
