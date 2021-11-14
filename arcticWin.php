@@ -53,7 +53,7 @@
 			<div class = "ausFormBlk">
 				<form id = "ausForm" >
 					<input class = "form__fields-item uniFormGn tranzitGn" type = "text" placeholder = "Введите гос-номер">
-					<input class = "form__fields-item uniFormName" type = "text" placeholder = "Введите имя">
+					<input class = "form__fields-item uniFormName" type = "email" placeholder = "e-mail*">
 					<input class = "form__fields-item mascedtel uniFormTel" type = "text" placeholder = "Введите телефон">
 					<div class = "action-btn uniSendBtnProp" data-formid = "ausForm" data-mailmsg = "Подписка на оповещение" id = "opoveshenie">Оставить заявку</div>
 				</form>

@@ -23,7 +23,9 @@ jQuery(document).ready(function($) {
 			event.stopPropagation();
 			var formid = jQuery(this).data("formid");
 			var message = jQuery(this).data("mailmsg");
-			
+			if (jQuery("#"+formid+" .uniFormMail").val() == "") {
+				jQuery("#"+formid+" .uniFormMail").css("background-color","#ff91a4")
+			} else
 			if ((jQuery("#"+formid+" .uniFormTel").val() == "")||(jQuery("#"+formid+" .uniFormTel").val().indexOf("_")>0)) {
 				jQuery("#"+formid+" .uniFormTel").css("background-color","#ff91a4")
 			} else {
@@ -34,6 +36,7 @@ jQuery(document).ready(function($) {
 						nonce: allAjax.nonce,
 						msg: message,
 						name: jQuery("#"+formid+" .uniFormName").val(),
+						ml: jQuery("#"+formid+" .uniFormMail").val(),
 						tel: jQuery("#"+formid+" .uniFormTel").val()
 					}
 					
