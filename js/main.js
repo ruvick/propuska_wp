@@ -23,6 +23,15 @@ jQuery(document).ready(function($) {
 			event.stopPropagation();
 			var formid = jQuery(this).data("formid");
 			var message = jQuery(this).data("mailmsg");
+			
+			var gn = jQuery("#"+formid+" .uniFormGn").val();
+
+			if (jQuery("#"+formid+" .uniFormGn").length != 0)
+			if (jQuery("#"+formid+" .uniFormGn").val() == "") {
+				jQuery("#"+formid+" .uniFormGn").css("background-color","#ff91a4")
+				return;
+			}
+
 			if (jQuery("#"+formid+" .uniFormMail").val() == "") {
 				jQuery("#"+formid+" .uniFormMail").css("background-color","#ff91a4")
 			} else
