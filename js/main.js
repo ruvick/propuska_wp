@@ -36,6 +36,7 @@ jQuery(document).ready(function($) {
 						nonce: allAjax.nonce,
 						msg: message,
 						name: jQuery("#"+formid+" .uniFormName").val(),
+						gn: jQuery("#"+formid+" .uniFormGn").val(),
 						ml: jQuery("#"+formid+" .uniFormMail").val(),
 						tel: jQuery("#"+formid+" .uniFormTel").val()
 					}
@@ -72,7 +73,7 @@ jQuery(document).ready(function($) {
 						action: 'universal_send',		
 						nonce: allAjax.nonce,
 						msg: message,
-						name: jQuery("#"+formid+" .uniFormName").val(),
+						ml: jQuery("#"+formid+" .uniFormName").val(),
 						tel: jQuery("#"+formid+" .uniFormTel").val(),
 						gn: jQuery("#"+formid+" .uniFormGn").val(),
 					}

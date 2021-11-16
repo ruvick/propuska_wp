@@ -45,7 +45,7 @@
 					<p class="checking__form-heading">Подключите круглосуточный контроль пропусков бесплатно на 365 дней</p>
 					
 					<div class="form__fields" id = "checform" >
-						<input type="text" name="inv_number" class="form__fields-item uniFormName" placeholder="Гос номер*" required autocomplete="off">
+						<input type="text" name="inv_number" class="form__fields-item uniFormGn" placeholder="Гос номер*" required autocomplete="off">
 						<input type="email" name="inv_mail" class="form__fields-item uniFormMail" placeholder="e-mail*" required autocomplete="off">
 						<input type="tel" name="phone_number" class="form__fields-item mascedtel uniFormTel" placeholder="Введите номер телефона*" required autocomplete="off">
 					</div>
