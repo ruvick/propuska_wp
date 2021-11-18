@@ -25,6 +25,10 @@
 	border-spacing: 0;
 }
 
+.no_aus_msg {
+  text-align: center;
+}
+
 #ausModal td, #ausModal th{
 	border-bottom:1px solid lightgray;
 	border-right:1px solid lightgray;

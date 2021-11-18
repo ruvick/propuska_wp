@@ -32,9 +32,9 @@ jQuery(document).ready(function($) {
 				return;
 			}
 
-			if (jQuery("#"+formid+" .uniFormMail").val() == "") {
-				jQuery("#"+formid+" .uniFormMail").css("background-color","#ff91a4")
-			} else
+			// if (jQuery("#"+formid+" .uniFormMail").val() == "") {
+			// 	jQuery("#"+formid+" .uniFormMail").css("background-color","#ff91a4")
+			// } else
 			if ((jQuery("#"+formid+" .uniFormTel").val() == "")||(jQuery("#"+formid+" .uniFormTel").val().indexOf("_")>0)) {
 				jQuery("#"+formid+" .uniFormTel").css("background-color","#ff91a4")
 			} else {
@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 						action: 'universal_send',		
 						nonce: allAjax.nonce,
 						msg: message,
-						ml: jQuery("#"+formid+" .uniFormName").val(),
+						name: jQuery("#"+formid+" .uniFormName").val(),
 						tel: jQuery("#"+formid+" .uniFormTel").val(),
 						gn: jQuery("#"+formid+" .uniFormGn").val(),
 					}
@@ -141,6 +141,13 @@ jQuery(document).ready(function($) {
 				
 				jqXHR.done(function (responce) {
 					console.log(responce);
+
+					if (responce.length == 0) {
+						jQuery("#ausModal .loadWraper").hide();
+						jQuery(".tranzitGn").val(car_number);
+						jQuery(".no_aus_msg").html("<span style = 'font-size:32px'>🛑</span><br/><br/>Пропуск в базе Департамента Транспорта не найден. Повторите попытку позже.");
+						return;
+					}
 
 					var RezStr = "<table class='skip-information'>";
 					RezStr += "<thead>";

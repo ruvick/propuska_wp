@@ -22,6 +22,8 @@
 			<div class = "ausInfo">
 
 			</div>
+			<p class = "no_aus_msg"></p>
+
 			<p class = "mh3">Спецпредложение!</p> 
 			<?php 
 
@@ -53,7 +55,7 @@
 			<div class = "ausFormBlk">
 				<form id = "ausForm" >
 					<input class = "form__fields-item uniFormGn tranzitGn" type = "text" placeholder = "Введите гос-номер">
-					<input class = "form__fields-item uniFormName" type = "email" placeholder = "e-mail*">
+					<input class = "form__fields-item uniFormName" type = "email" placeholder = "Ваше Имя">
 					<input class = "form__fields-item mascedtel uniFormTel" type = "text" placeholder = "Введите телефон">
 					<div class = "action-btn uniSendBtnProp" data-formid = "ausForm" data-mailmsg = "Подписка на оповещение" id = "opoveshenie">Оставить заявку</div>
 				</form>
