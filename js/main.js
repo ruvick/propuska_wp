@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
 	
 	
 		jQuery(".uniSendBtn").click(function(event){ 
+			jQuery(this).css("pointer-events", "none")
 			event.stopPropagation();
 			var formid = jQuery(this).data("formid");
 			var message = jQuery(this).data("mailmsg");
@@ -57,6 +58,7 @@ jQuery(document).ready(function($) {
 					
 					jQuery('#messgeModal #lineMsg').html("Ваша заявка принята. Мы свяжемся с Вами в ближайшее время.");
 					jQuery('#messgeModal').arcticmodal();
+					jQuery(this).css("pointer-events", "auto")
 					
 				});
 				
@@ -64,12 +66,19 @@ jQuery(document).ready(function($) {
 					jQuery('#messgeModal #lineIcon').html('');
 					jQuery('#messgeModal #lineMsg').html("Произошла ошибка! Попробуйте позднее.");
 					jQuery('#messgeModal').arcticmodal();
+					jQuery(this).css("pointer-events", "auto")
 				});
+
+				jQuery("#"+formid+" .uniFormName").val("")
+				jQuery("#"+formid+" .uniFormGn").val("")
+				jQuery("#"+formid+" .uniFormMail").val("")
+				jQuery("#"+formid+" .uniFormTel").val("")
 			}
 			return false;
 		});
 
 		jQuery(".uniSendBtnProp").click(function(){ 
+			jQuery(this).css("pointer-events", "none")
 			var formid = jQuery(this).data("formid");
 			var message = jQuery(this).data("mailmsg");
 			
@@ -95,13 +104,20 @@ jQuery(document).ready(function($) {
 					jQuery('#messgeModal #lineMsg').html("Ваша заявка принята. Мы свяжемся с Вами в ближайшее время.");
 					jQuery('#messgeModal').arcticmodal();
 					
+					jQuery(this).css("pointer-events", "auto")
 				});
 				
 				jqXHR.fail(function (responce) {
 					jQuery('#messgeModal #lineIcon').html('');
 					jQuery('#messgeModal #lineMsg').html("Произошла ошибка! Попробуйте позднее.");
 					jQuery('#messgeModal').arcticmodal();
+
+					jQuery(this).css("pointer-events", "auto")
 				});
+
+				jQuery("#"+formid+" .uniFormName").val("")
+				jQuery("#"+formid+" .uniFormTel").val("")
+				jQuery("#"+formid+" .uniFormGn").val("")
 			}
 		});	
 
