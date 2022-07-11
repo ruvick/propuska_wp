@@ -42,7 +42,7 @@ function my_assets_admin()
 	));
 }
 
-define("allversion", "1.0.90");
+define("allversion", "1.0.901");
 
 // Подключение стилей и nonce для Ajax и скриптов во фронтенд 
 add_action('wp_enqueue_scripts', 'my_assets');
@@ -208,9 +208,21 @@ function universal_send()
 		if (!empty($_REQUEST["gn"]))
 			$mail_content .= '<br/> <strong>Госномер:</strong> ' . $_REQUEST["gn"];
 
-		if (wp_mail(carbon_get_theme_option('main_sendmail'), 'Заказ с сайта', $mail_content, $headers))
+		if (isset($_COOKIE['sendet'])) {
 			wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
-		else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
+		}
+
+
+		if (wp_mail(carbon_get_theme_option('main_sendmail'), 'Заказ с сайта', $mail_content, $headers))
+			{
+				// setcookie("sendet", "s", time()+86400, "/", "propuska-mkad-ttk-sk.ru");
+				wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
+				
+			}
+			else 
+			{
+				wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
+			}
 	} else {
 		wp_die('НО-НО-НО!', '', 403);
 	}

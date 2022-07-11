@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
 				
 				
 				jqXHR.done(function (responce) {
-					
+					document.cookie = "sendet=sendet; path=/; max-age=86400"
 					jQuery('#messgeModal #lineMsg').html("Ваша заявка принята. Мы свяжемся с Вами в ближайшее время.");
 					jQuery('#messgeModal').arcticmodal();
 					jQuery(this).css("pointer-events", "auto")
@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
 				
 				
 				jqXHR.done(function (responce) {
-					
+					document.cookie = "sendet=sendet; path=/; max-age=86400"
 					jQuery('#messgeModal #lineMsg').html("Ваша заявка принята. Мы свяжемся с Вами в ближайшее время.");
 					jQuery('#messgeModal').arcticmodal();
 					
