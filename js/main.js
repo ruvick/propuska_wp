@@ -135,6 +135,14 @@ jQuery(document).ready(function($) {
 				var car_number = jQuery("#ausviceNum").val();
 				car_number = del_spaces(car_number);
 			
+				let is_rus = car_number.match(/^[А-Я]{1}\d{3}[А-Я]{2}(\d{3}|\d{2})$/)
+
+				let zpros = "https://back2.propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info?number="+car_number
+				if (is_rus == null) {
+					console.log("no ruso")
+					zpros = "https://back2.propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info_zag?number="+car_number
+				}
+
 			if (jQuery("#ausviceNum").val() == "") {
 				jQuery("#ausviceNum").css("background-color","#ff91a4")
 			} else {
@@ -143,7 +151,7 @@ jQuery(document).ready(function($) {
 
 				
 
-				var  jqXHR = jQuery.get("https://propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info?number="+car_number);
+				var  jqXHR = jQuery.get("https://back2.propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info?number="+car_number);
 
 				// var  jqXHR = jQuery.post(
 				// 	allAjax.ajaxurl,
