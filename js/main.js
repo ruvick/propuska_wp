@@ -151,7 +151,7 @@ jQuery(document).ready(function($) {
 
 				
 
-				var  jqXHR = jQuery.get("https://back2.propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info?number="+car_number);
+				var  jqXHR = jQuery.get(zpros);
 
 				// var  jqXHR = jQuery.post(
 				// 	allAjax.ajaxurl,
