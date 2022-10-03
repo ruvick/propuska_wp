@@ -234,7 +234,7 @@ jQuery(document).ready(function($) {
 						} else {
 							RezStr += "<tr>";
 						}
-								RezStr += "<td class='car_number'>" + element.truck_num + "</td>";
+								RezStr += "<td class='car_number'>" + element.truck_num.replace(/\s+/g, '')+ "</td>";
 								RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+((element.type_pass==null)?'Дневной':element.type_pass)+")"+"</td>";
 								RezStr += "<td class='element_passInfo'>"+element.series+" "+element.pass_number+"</td>";
 								RezStr += "<td class='element_dateStart'>"+element.valid_from.substr(0, 10)+"</td>";
