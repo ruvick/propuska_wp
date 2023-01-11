@@ -35,7 +35,7 @@
 							<div class="advantages__list-media">
 								<img src="<?php bloginfo("template_url");?>/img/icons/Preim_icon_3.svg" class="advantages__list-media-icon">
 							</div>
-							<div class="advantages__list-text">Имеем официальную поддержку департамента транспорта</div>
+							<div class="advantages__list-text">Официально в департаменте транспорта</div>
 						</div>
 					</li>
 					
@@ -53,7 +53,7 @@
 							<div class="advantages__list-media">
 								<img src="<?php bloginfo("template_url");?>/img/icons/Preim_icon_5.svg" class="advantages__list-media-icon">
 							</div>
-							<div class="advantages__list-text">100% гарантия возврата<br/> средств в случае аннулирования пропуска</div>
+							<div class="advantages__list-text">Выгодные условия сотрудничества</div>
 						</div>
 					</li>
 
