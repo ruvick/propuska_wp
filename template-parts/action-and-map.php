@@ -9,26 +9,26 @@
 		?>
 			<?php if($zoneName === "МКАД"):?>
 				<i class="services__carts-img" style="background-image: url(<?php bloginfo("template_url");?>/img/carts/1.jpg);"></i>
-				<div class="services__carts-price">
+				<!-- <div class="services__carts-price">
 					<div class="services__carts-price-old">20 000 &#x20BD;</i></div>
 					<div class="services__carts-price-real">12 000 &#x20BD;</i></div>
-				</div>
+				</div> -->
 			<?php endif; ?>
 			
 			<?php if($zoneName === "ТТК"):?>
 				<i class="services__carts-img" style="background-image: url(<?php bloginfo("template_url");?>/img/carts/2.jpg);"></i>
-				<div class="services__carts-price">
+				<!-- <div class="services__carts-price">
 					<div class="services__carts-price-old">20 000 &#x20BD;</i></div>
 					<div class="services__carts-price-real">12 000 &#x20BD;</i></div>
-				</div>
+				</div> -->
 			<?php endif; ?>
 			
 			<?php if($zoneName === "СК"):?>
 				<i class="services__carts-img" style="background-image: url(<?php bloginfo("template_url");?>/img/carts/3.jpg);"></i>
-				<div class="services__carts-price">
+				<!-- <div class="services__carts-price">
 					<div class="services__carts-price-old">20 000 &#x20BD;</i></div>
 					<div class="services__carts-price-real">12 000 &#x20BD;</i></div>
-				</div>
+				</div> -->
 			<?php endif; ?>
 		</div>
 		

@@ -39,7 +39,6 @@
 </script>
 
 <body>
-    
     <?
         if (is_home() || is_page(444) || is_page(7) || is_page(9) || is_page(5)) {
     ?>
@@ -96,7 +95,7 @@
 			</div>
 			<div class="header__menu-inner js-menu">
 				<ul class="header__menu-container">
-					<li class="header__menu-item"><a href="<?php echo get_permalink(24)?>" class="header__menu-link">Дополнительные услуги</a></li>
+					<!-- <li class="header__menu-item"><a href="<?php echo get_permalink(24)?>" class="header__menu-link">Дополнительные услуги</a></li> -->
 					<li class="header__menu-item"><a href="<?php echo get_permalink(16)?>" class="header__menu-link">О нас</a></li>
 					<li class="header__menu-item"><a href="<?php echo get_permalink(51)?>" class="header__menu-link">Контакты</a></li>
 				</ul>

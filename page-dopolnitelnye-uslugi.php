@@ -34,10 +34,10 @@ if($query->have_posts()) :?>
 				if(empty(carbon_get_the_post_meta('tech_additional_price'))):
 					$is_price = 'opacity-0';
 				endif;?>
+<!-- 				
 				<div class="services__carts-price <?php echo $is_price?>">
-					<!-- <div class="services__carts-price-old">23 000 ₽</div> -->
 					<div class="services__carts-price-real"><?php echo carbon_get_the_post_meta('tech_additional_price')?> ₽</div>
-				</div>
+				</div> -->
 			
 				<div class="services__carts-about">
 					<div class="services__carts-about-text"><?php the_excerpt();?></div>

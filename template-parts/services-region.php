@@ -15,16 +15,16 @@
 						<div class="services__carts-inner">
 							<p class="services__carts-heading">Пропуск на <br />МКАД</p>
 							<i class="services__carts-img" style="background-image: url(<?php bloginfo("template_url"); ?>/img/carts/1.jpg);"></i>
-							<div class="services__carts-price">
+							<!-- <div class="services__carts-price">
 								<div class="services__carts-price-old">20 000 &#x20BD;</i></div>
 								<div class="services__carts-price-real"> 5 000 &#x20BD;</i></div>
-							</div>
+							</div> -->
 							<div class="services__carts-about">
-								<a href="#" class="services__carts-about-link">Подробнее</a>
+								<a href="<?the_permalink(5)?>" class="services__carts-about-link">Подробнее</a>
 								<div class="services__carts-about-text">Позволяет грузовому транспорту с разрешенной массой более 12 т свободно передвигаться в зоне от МКАД до ТТК</div>
 							</div>
 							<div class="services__carts-action">
-								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Оформить пропуск</a>
+								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Получить пропуск</a>
 							</div>
 						</div>
 					</li>
@@ -35,16 +35,16 @@
 						<div class="services__carts-inner">
 							<p class="services__carts-heading">Пропуск на <br />ТТК</p>
 							<i class="services__carts-img" style="background-image: url(<?php bloginfo("template_url"); ?>/img/carts/2.jpg);"></i>
-							<div class="services__carts-price">
+							<!-- <div class="services__carts-price">
 								<div class="services__carts-price-old">20 000 &#x20BD;</i></div>
 								<div class="services__carts-price-real"> 5 000 &#x20BD;</i></div>
-							</div>
+							</div> -->
 							<div class="services__carts-about">
-								<a href="#" class="services__carts-about-link">Подробнее</a>
+								<a href="<?the_permalink(7)?>" class="services__carts-about-link">Подробнее</a>
 								<div class="services__carts-about-text">Дает право грузовым автомобилям с разрешенной массой от 1 тонны свободно передвигаться в зоне ТТК (без заезда на СК)</div>
 							</div>
 							<div class="services__carts-action">
-								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Оформить пропуск</a>
+								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Получить пропуск</a>
 							</div>
 						</div>
 					</li>
@@ -55,16 +55,16 @@
 						<div class="services__carts-inner">
 							<p class="services__carts-heading">Пропуск на <br />СК</p>
 							<i class="services__carts-img" style="background-image: url(<?php bloginfo("template_url"); ?>/img/carts/3.jpg);"></i>
-							<div class="services__carts-price">
+							<!-- <div class="services__carts-price">
 								<div class="services__carts-price-old">7 000 &#x20BD;</i></div>
 								<div class="services__carts-price-real"> 5 000 &#x20BD;</i></div>
-							</div>
+							</div> -->
 							<div class="services__carts-about">
-								<a href="#" class="services__carts-about-link">Подробнее</a>
+								<a href="<?the_permalink(9)?>" class="services__carts-about-link">Подробнее</a>
 								<div class="services__carts-about-text">Грузовой пропуск в зоне СК дает право передвижения по всей территории Москвы без ограничений</div>
 							</div>
 							<div class="services__carts-action">
-								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Оформить пропуск</a>
+								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Получить пропуск</a>
 							</div>
 						</div>
 					</li>
@@ -75,16 +75,16 @@
 						<div class="services__carts-inner">
 							<p class="services__carts-heading">Диагностическая<br /> карта</p>
 							<i class="services__carts-img services__carts-img--contain" style="background-image: url(<?php bloginfo("template_url"); ?>/img/carts/diagnosticheskaia_karta.png);"></i>
-							<div class="services__carts-price">
+							<!-- <div class="services__carts-price">
 								<div class="services__carts-price-old">1500 &#x20BD;</i></div>
 								<div class="services__carts-price-real">1000 &#x20BD;</i></div>
-							</div>
+							</div> -->
 							<div class="services__carts-about">
-								<a href="#" class="services__carts-about-link">Подробнее</a>
+								<!-- <a href="#" class="services__carts-about-link">Подробнее</a> -->
 								<div class="services__carts-about-text">Диагностическая права является подтверждением пригодности грузового автотранспорта для передвижения по дорогам на территории РФ</div>
 							</div>
 							<div class="services__carts-action">
-								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Заказать карту</a>
+								<a href="#modal_feedback" class="services__carts-action-btn action-btn js-modal-open">Подробнее</a>
 							</div>
 						</div>
 					</li>
@@ -93,7 +93,7 @@
 			</ul>
 		</div>
 
-		<div class="services__sub">
+		<!-- <div class="services__sub">
 			<p class="services__sub-heading section-heading">Так же мы оказываем услуги:</p>
 			<div class="services__sub-list">
 				<ul class="services__sub-list-container">
@@ -114,6 +114,7 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
+
 	</div>
 </section> <!-- /.services -->

@@ -89,7 +89,7 @@ if(!empty(carbon_get_the_post_meta('tech_banner_bg'))) {
 							</li>
 							<li class="utp__list-item">
 								<div class="utp__list-media"><img src="<?php bloginfo("template_url");?>/img/icons/mkad_icon_3.svg" alt="svg icon" class="utp__list-media-img"></div>
-								<div class="utp__list-text">При поддержке департамента транспорта г. Москвы</div>
+								<div class="utp__list-text">Официально в Департаменте транспорта г. Москвы</div>
 							</li>
 							<li class="utp__list-item">
 								<div class="utp__list-media"><img src="<?php bloginfo("template_url");?>/img/icons/mkad_icon_4.svg" alt="svg icon" class="utp__list-media-img"></div>

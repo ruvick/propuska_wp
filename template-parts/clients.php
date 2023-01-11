@@ -101,10 +101,9 @@
 						<?php endforeach;?>
 					</div>
 				<?php endif;?>
-				<div class="clients__reviews-list">
+				<!-- <div class="clients__reviews-list">
 					<ul class="clients__reviews-list-container">
 						<li class="clients__reviews-list-item">
-							<!--<iframe width="450" height="249" src="https://www.youtube.com/embed/o3N21N-lclc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 							<iframe width="450" height="249" src="https://www.youtube.com/embed/djj1c3xFOnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</li>
 						<li class="clients__reviews-list-item">
@@ -126,7 +125,7 @@
 							<iframe width="450" height="249" src="https://www.youtube.com/embed/JQbblAxnwk4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section> <!-- /.clients -->

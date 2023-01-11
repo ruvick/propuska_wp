@@ -8,7 +8,7 @@
 						<a href="#" class="footer__boxes-logo-info-media header__logo-info-media">
 							<img src="<?php bloginfo("template_url");?>/img/icons/logo-tsk.png" alt="logotype" class="footer__boxes-logo-info-img header__logo-info-img">
 						</a>
-						<span class="footer__boxes-logo-info-desc header__logo-info-desc">При поддержке департамента<br/> транспорта г. Москвы</span>
+						<span class="footer__boxes-logo-info-desc header__logo-info-desc">Официально в Департаменте <br/>транспорта г. Москвы</span>
 					</span>
 				</div>
 
@@ -44,7 +44,7 @@
 			</div>
 
 			<div class="footer__copy">
-				<div class="footer__copy-box">(с) 2014-<?php echo get_the_date("Y");?>. Все права защищены</div>
+				<div class="footer__copy-box">(с) 2014-<?php echo date("Y");?>. Все права защищены</div>
 				<div class="footer__copy-box"><a href="<?php echo get_permalink(3)?>" class="hover-underline">Политика конфиденциальности</a></div>
 			</div>
 		</div>

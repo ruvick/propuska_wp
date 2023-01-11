@@ -130,6 +130,16 @@ jQuery(document).ready(function($) {
 	jQuery('#ausviceNum').change(function(){
 	   jQuery(this).val(jQuery(this).val().replace(/ +/g, ''));
 	});
+
+	let ausviceNum = document.getElementById("ausviceNum");
+
+	ausviceNum.addEventListener("keypress", function(event) {
+	if (event.key === "Enter") {
+		event.preventDefault()
+		console.log("Enter----->")
+		document.getElementById('checkAusvice').click()
+	}
+	});
 	
 	jQuery("#checkAusvice").click(function(){ 
 				var car_number = jQuery("#ausviceNum").val();

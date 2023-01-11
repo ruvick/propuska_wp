@@ -1,4 +1,4 @@
-<section class="our-team">
+<!-- <section class="our-team">
 	<div class="container">
 			<?php 
 			global $title;
@@ -64,4 +64,4 @@
 			
 		</div>
 	</div>
-</section>
+</section> -->

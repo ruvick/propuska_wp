@@ -1,5 +1,5 @@
 <section class="partners">
-		
+<!-- 		
 		<div class="partner-programs">
 			<div class="container">
 				<div class="partner-programs__item partner-programs__title">
@@ -24,7 +24,8 @@
 					<p>Свяжитесь с нами, чтобы узнать подробности:</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
+
 		<div class="partners-offer">
 			<div class="container">
 				<div class="partners-offer__title">
