@@ -65,7 +65,7 @@ function my_assets()
 	wp_enqueue_script('slick', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), null, true);
 	//wp_enqueue_script( 'fbx', get_template_directory_uri().'/js/jquery.fancybox.min.js', array('jquery'), null, true);
 	wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true);
-	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true);
+	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), allversion, true);
 
 
 	wp_localize_script('jquery', 'allAjax', array(
