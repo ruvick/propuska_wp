@@ -151,10 +151,10 @@ jQuery(document).ready(function($) {
 					
 						let is_rus = car_number.match(/^[А-Я]{1}\d{3}[А-Я]{2}(\d{3}|\d{2})$/)
 
-						let zpros = "https://back2.propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
+						let zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
 						if (is_rus == null) {
 							console.log("no ruso")
-							zpros = "https://back2.propuska-mkad-ttk-sk.ru/wp-json/lscrm/v2/number_info_zag?number="+car_number+"&token="+token
+							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_zag?number="+car_number+"&token="+token
 						}
 
 					if (jQuery("#ausviceNum").val() == "") {
