@@ -150,11 +150,16 @@ jQuery(document).ready(function($) {
 						car_number = del_spaces(car_number);
 					
 						let is_rus = car_number.match(/^[А-Я]{1}\d{3}[А-Я]{2}(\d{3}|\d{2})$/)
+						let is_rus2 = car_number.match(/^[A-Z]{1}\d{3}[A-Z]{2}(\d{3}|\d{2})$/)
 
-						let zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
-						if (is_rus == null) {
+						let zpros = ''
+
+						if ((is_rus == null)&&(is_rus2 == null)) {
 							console.log("no ruso")
 							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_zag?number="+car_number+"&token="+token
+						} else {
+							console.log("Ruso!!!")
+							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
 						}
 
 					if (jQuery("#ausviceNum").val() == "") {
