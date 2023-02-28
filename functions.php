@@ -42,7 +42,7 @@ function my_assets_admin()
 	));
 }
 
-define("allversion", "1.0.915");
+define("allversion", "1.0.917");
 
 // Подключение стилей и nonce для Ajax и скриптов во фронтенд 
 add_action('wp_enqueue_scripts', 'my_assets');

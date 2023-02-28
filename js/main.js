@@ -255,7 +255,12 @@ jQuery(document).ready(function($) {
 									RezStr += "<tr>";
 								}
 										RezStr += "<td class='car_number'>" + element.truck_num.replace(/\s+/g, '')+ "</td>";
-										RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+((element.pass_type_action_time==null)?'Дневной':element.pass_type_action_time)+")"+"</td>";
+										if ((is_rus == null)&&(is_rus2 == null)) {
+											RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+((element.type_pass==null)?'Дневной':element.type_pass)+")"+"</td>";
+										} else {
+											RezStr += "<td class='element_zone'>"+element.pass_zone+" ("+((element.pass_type_action_time==null)?'Дневной':element.pass_type_action_time)+")"+"</td>";
+										}
+										
 										RezStr += "<td class='element_passInfo'>"+element.series+" "+element.pass_number+"</td>";
 										RezStr += "<td class='element_dateStart'>"+element.valid_from.substr(0, 10)+"</td>";
 										RezStr += "<td class='element_dateEnd'>"+element.valid_to.substr(0, 10)+"</td>";
