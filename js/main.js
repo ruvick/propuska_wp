@@ -238,7 +238,7 @@ jQuery(document).ready(function($) {
 									// }
 
 									let dc = element.deycount;
-								if (( element.sys_status == "Действует") 
+								if (( element.status == "Действующий") 
 									|| ( element.sys_status ==  "Заканчивается завтра") 
 									|| ( element.sys_status ==  "Заканчивается сегодня")
 									|| ( element.sys_status ==  "Начинается сегодня")
