@@ -159,7 +159,8 @@ jQuery(document).ready(function($) {
 							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_zag?number="+car_number+"&token="+token
 						} else {
 							console.log("Ruso!!!")
-							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
+							// zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
+							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info?number="+car_number+"&token="+token
 						}
 
 					if (jQuery("#ausviceNum").val() == "") {
