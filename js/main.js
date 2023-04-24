@@ -160,7 +160,7 @@ jQuery(document).ready(function($) {
 						} else {
 							console.log("Ruso!!!")
 							// zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
-							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info?number="+car_number+"&token="+token
+							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_for_site?number="+car_number+"&token="+token
 						}
 
 					if (jQuery("#ausviceNum").val() == "") {
@@ -239,18 +239,15 @@ jQuery(document).ready(function($) {
 									// }
 
 									let dc = element.deycount;
-								if (( element.status == "Действующий") 
-									|| ( element.sys_status ==  "Заканчивается завтра") 
-									|| ( element.sys_status ==  "Заканчивается сегодня")
-									|| ( element.sys_status ==  "Начинается сегодня")
-									|| ( element.sys_status ==  "Начинается завтра")
+								if (( element.status == "Выдан") 
+									&& ( dc > 0) 
+									// || ( element.sys_status ==  "Заканчивается сегодня")
+									// || ( element.sys_status ==  "Начинается сегодня")
+									// || ( element.sys_status ==  "Начинается завтра")
 									) {
 									RezStr += "<tr class='bg-green'>";
 								} else if (element.status == "Аннулирован") {
 									RezStr += "<tr class='bg-red'>";
-									// str = element.cancel_date.split(' ', 2);
-									
-									// dc = "Аннулирован " + str[0];
 									dc = "Аннулирован";
 								} else {
 									RezStr += "<tr>";
