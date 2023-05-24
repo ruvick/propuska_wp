@@ -156,11 +156,11 @@ jQuery(document).ready(function($) {
 
 						if ((is_rus == null)&&(is_rus2 == null)) {
 							console.log("no ruso")
-							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_zag?number="+car_number+"&token="+token
+							zpros = "https://back2.crm-propuska-mts.ru/wp-json/lscrm/v2/number_info_zag?number="+car_number+"&token="+token
 						} else {
 							console.log("Ruso!!!")
-							// zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
-							zpros = "https://back2.propuska-mkad-official.ru/wp-json/lscrm/v2/number_info_for_site?number="+car_number+"&token="+token
+							// zpros = "https://back2.crm-propuska-mts.ru/wp-json/lscrm/v2/number_info_new?number="+car_number+"&token="+token
+							zpros = "https://back2.crm-propuska-mts.ru/wp-json/lscrm/v2/number_info_for_site?number="+car_number+"&token="+token
 						}
 
 					if (jQuery("#ausviceNum").val() == "") {
