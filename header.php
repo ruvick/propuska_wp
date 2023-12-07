@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira+Sans:400,500,700">
 
 <script src="https://www.google.com/recaptcha/api.js?render=6LdXHxAkAAAAAPXMSVztj9kjlRKVtNYbQrdK7k5u"></script>
+<meta name="yandex-verification" content="0a45b812fec292ab" />
 
 <?php wp_head(); ?>
 </head>
